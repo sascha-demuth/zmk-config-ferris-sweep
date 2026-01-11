@@ -72,13 +72,33 @@
             compatible = "zmk,combos" ;
             combo_lctl {
                 timeout-ms = <50>;
-                key-positions = < 9 13 >;
+                key-positions = < 0 1 >;
                 bindings = <&kp LCTRL>;
                     };
-            combo_test {
+            combo_lalt {
                 timeout-ms = <50>;
-                key-positions = < 9 10 >;
-                bindings = <&kp S>;
+                key-positions = < 1 2 >;
+                bindings = <&kp LALT>;
+                    };
+            combo_lgui {
+                timeout-ms = <50>;
+                key-positions = < 2 3 >;
+                bindings = <&kp LGUI>;
+                    };
+            combo_rctl {
+                timeout-ms = <50>;
+                key-positions = < 8 9 >;
+                bindings = <&kp RCTRL>;
+                    };
+            combo_ralt {
+                timeout-ms = <50>;
+                key-positions = < 7 8 >;
+                bindings = <&kp RALT>;
+                    };
+            combo_rgui {
+                timeout-ms = <50>;
+                key-positions = < 6 7 >;
+                bindings = <&kp RGUI>;
                     };
             };
     };
@@ -100,7 +120,7 @@
             display-name = "DEFAULT";
             bindings = <
             &kp Q  &kp W       &kp E        &kp R        &kp T         &kp Y      &kp U        &kp I        &kp O       &kp P
-            &kp A  &ht LALT S  &ht LCTRL D  &ht LGUI F   &kp G         &kp H      &ht RGUI J   &ht RCTRL K  &ht RALT L  &kp BSPC
+            &kp A  &kp S       &kp D        &kp F        &kp G         &kp H      &kp J        &kp K        &kp L       &kp BSPC
             &kp Z  &kp X       &kp C        &kp V        &kp B         &kp N      &kp M        &kp COMMA    &kp DOT     &kp ENTER
             &lt LEF TAB  &kp LSHIFT     &kp SPACE &lt RIG TAB
             >;
