@@ -68,9 +68,6 @@
             time-to-max-speed-ms = <40>;      // 500
             delay-ms = <0>;                   // 10
         };
-    };
-
-    /{
         combos {
             compatible = "zmk,combos" ;
             combo_lctl {
@@ -79,7 +76,8 @@
                 bindings = <&kp LCTRL>;
                     };
             };
-    );
+    };
+
 
     conditional_layers {
         compatible = "zmk,conditional-layers";
