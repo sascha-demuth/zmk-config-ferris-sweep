@@ -70,6 +70,17 @@
         };
     };
 
+    /{
+        combos {
+            compatible = "zmk,combos" ;
+            combo_lctl {
+                timeout-ms = <50>;
+                key-positions = < 9 13 >;
+                bindings = <&kp LCTRL>;
+                    };
+            };
+    );
+
     conditional_layers {
         compatible = "zmk,conditional-layers";
 
@@ -79,6 +90,8 @@
         };
     };
 
+    
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -86,7 +99,7 @@
             display-name = "DEFAULT";
             bindings = <
             &kp Q  &kp W       &kp E        &kp R        &kp T         &kp Y      &kp U        &kp I        &kp O       &kp P
-            &kp A  &ht LALT S  &ht LCTRL D  &ht LGUI F   &kp G         &kp H      &ht RGUI J   &ht RCTRL K  &ht RALT L  &kp BSPC
+            &kp A  &kp S  &ht LCTRL D  &ht LGUI F   &kp G         &kp H      &ht RGUI J   &ht RCTRL K  &ht RALT L  &kp BSPC
             &kp Z  &kp X       &kp C        &kp V        &kp B         &kp N      &kp M        &kp COMMA    &kp DOT     &kp ENTER
             &lt LEF TAB  &kp LSHIFT     &kp SPACE &lt RIG TAB
             >;
