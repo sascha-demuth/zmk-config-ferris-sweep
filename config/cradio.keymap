@@ -41,16 +41,13 @@
         compatible = "zmk,soft-off-wakeup-sources";
         wakeup-sources = <&wakeup_scan>;
     };
-};
 
-/ {
+
     macros {
         safari_switch_tab : safari_switch_tab {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings
-                = 
-		<&macro_press &kp LGUI>
+            bindings = <&macro_press &kp LGUI>
 		, <&macro_press &kp LSHFT>
                 , <&macro_tap &kp BSLH>
                 , <&macro_release &kp LSHFT>
@@ -167,7 +164,7 @@
             display-name = "SYMBOL";
             bindings = <
             &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS   &kp ASTRK  &kp GRAVE  &kp TILDE
-            &kp DQT   &kp LBKT  &kp LBRC  &kp LPAR  &default_report       &kp FSLH   &kp MINUS  &kp EQUAL  &kp COLON  &kp SEMI
+            &kp DQT   &kp LBKT  &kp LBRC  &kp LPAR  &trans       &kp FSLH   &kp MINUS  &kp EQUAL  &kp COLON  &kp SEMI
             &kp SQT   &kp RBKT  &kp RBRC  &kp RPAR  &bootloader       &kp BSLH   &kp UNDER  &kp PLUS   &kp PIPE   &kp QMARK
             &trans    &trans       &tog MOUSE     &trans
             >;
@@ -177,7 +174,7 @@
             display-name = "FUNC";
             bindings = <
             &kp F1  &kp F2   &kp F3   &kp F4   &bt BT_SEL 0    &bt BT_SEL 2  &out OUT_TOG   &tog WIN  &kp C_MUTE    &kp C_PREV
-            &kp safari_switch_tab  &kp F6   &kp F7   &kp F8   &bt BT_SEL 1    &bt BT_SEL 3  &kp C_BRI_UP   &studio_unlock    &kp C_VOL_UP  &kp C_PP
+            &safari_switch_tab  &kp F6   &kp F7   &kp F8   &bt BT_SEL 1    &bt BT_SEL 3  &kp C_BRI_UP   &studio_unlock    &kp C_VOL_UP  &kp C_PP
             &kp F9  &kp F10  &kp F11  &kp F12  &bt BT_CLR      &bt BT_SEL 4  &kp C_BRI_DEC  &soft_off    &kp C_VOL_DN  &kp C_NEXT
             &trans   &trans          &trans        &trans
             >;
