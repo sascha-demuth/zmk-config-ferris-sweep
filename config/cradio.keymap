@@ -44,6 +44,23 @@
 };
 
 / {
+    macros {
+        safari_switch_tab : safari_switch_tab {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = 
+		, <&macro_press &kp LGUI>
+		, <&macro_press &kp LSHFT>
+                , <&macro_tap &kp BSLH>
+                , <&macro_release &kp LSHFT>
+                , <&macro_release &kp LGUI>
+                ;
+        };
+    };
+};
+
+/ {
     chosen {
         zmk,charmap = &charmap_us;
     };
@@ -160,7 +177,7 @@
             display-name = "FUNC";
             bindings = <
             &kp F1  &kp F2   &kp F3   &kp F4   &bt BT_SEL 0    &bt BT_SEL 2  &out OUT_TOG   &tog WIN  &kp C_MUTE    &kp C_PREV
-            &kp F5  &kp F6   &kp F7   &kp F8   &bt BT_SEL 1    &bt BT_SEL 3  &kp C_BRI_UP   &studio_unlock    &kp C_VOL_UP  &kp C_PP
+            &kp safari_switch_tab  &kp F6   &kp F7   &kp F8   &bt BT_SEL 1    &bt BT_SEL 3  &kp C_BRI_UP   &studio_unlock    &kp C_VOL_UP  &kp C_PP
             &kp F9  &kp F10  &kp F11  &kp F12  &bt BT_CLR      &bt BT_SEL 4  &kp C_BRI_DEC  &soft_off    &kp C_VOL_DN  &kp C_NEXT
             &trans   &trans          &trans        &trans
             >;
