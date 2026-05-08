@@ -42,18 +42,18 @@
 };
 
 / {
-macros {
-    safari_switch_tab: safari_switch_tab {
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings = <&macro_press &kp LGUI>
-            , <&macro_press &kp LSHFT>
-            , <&macro_tap &kp BSLH>
-            , <&macro_release &kp LSHFT>
-            , <&macro_release &kp LGUI>
-            ;
+    macros {
+        safari_switch_tab: safari_switch_tab {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp LGUI>
+                , <&macro_press &kp LSHFT>
+                , <&macro_tap &kp BSLH>
+                , <&macro_release &kp LSHFT>
+                , <&macro_release &kp LGUI>
+                ;
+        };
     };
-};
 };
 
 / {
@@ -146,7 +146,7 @@ macros {
         };
 
         right_layer {
-            display-name = "NUM & NAVIGATION";
+            display-name = "NUM and NAVIGATION";
             bindings = 
                 &kp N1   &kp N2    &kp N3     &kp N4   &kp N5    &kp N6     &kp N7     &kp N8     &kp N9     &kp N0
                 &kp DEL  &kp CAPS  &kp PSCRN  &kp INS  &trans    &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &trans
