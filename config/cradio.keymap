@@ -50,7 +50,7 @@
             #binding-cells = <0>;
             bindings
                 = 
-		, <&macro_press &kp LGUI>
+		<&macro_press &kp LGUI>
 		, <&macro_press &kp LSHFT>
                 , <&macro_tap &kp BSLH>
                 , <&macro_release &kp LSHFT>
